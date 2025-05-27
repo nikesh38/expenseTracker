@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-import ExpenseForm from '../Component/ExpenseForm';
-import ExpenseList from '../Component/ExpenseList';
-import ExpenseSummary from '../Component/ExpenseSummary';
-import NavBar from '../Component/NavBar';
+ 
+import ExpenseTracker from '../Component/EsxpenseTracker';
 
 const HomePage = () => {
     const [expenses, setExpenses] = useState([]);
@@ -18,17 +16,9 @@ const HomePage = () => {
 
     return (
         <div>
-            <NavBar />
-            <div style={{
-                maxWidth: '600px',
-                margin: '2rem auto',
-                padding: '1rem'
-            }}>
-                <ExpenseForm onAddExpense={handleAddExpense} />
-                <ExpenseSummary expenses={expenses} />
-                <ExpenseList />
-            </div>
+            <ExpenseTracker />
         </div>
+  
     );
 };
 
